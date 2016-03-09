@@ -7,36 +7,48 @@
   <link rel="stylesheet" href="bower/normalize-css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <style>
-  body{
-    text-align: center;
-  }
+
+    body{
+      text-align: center;
+    }
+
     .brd {
       border: 1px solid #000;
     }
+
     svg {
       margin-left: 40px;
     }
+
    .rect {
       fill: #ff0;
       stroke: red;
       stroke-width: 2;
     }
+
+    .row {
+      margin-bottom: 40px;
+    }
   </style>
 </head>
 <body>
 
-  <svg class = "brd" width ="100" height ="100" viewBox = "0 0 100 100">
-    <circle cx="50" cy="50" r="20" style ="fill:green;" />
-  </svg>
-  <svg class = "brd" width ="100" height ="100" viewBox = "0 0 50 50">
-    <circle cx="50" cy="50" r="20" style ="fill:green;" />
-  </svg>
-  <svg class = "brd" width ="100" height ="100" viewBox = "30 30 40 40">
-    <circle cx="50" cy="50" r="20" style ="fill:green;" />
-  </svg>
-  <svg class = "brd" width ="100" height ="100" viewBox = "50 50 20 20">
-    <circle cx="50" cy="50" r="20" style ="fill:green;" />
-  </svg>
+  <div class="row">
+    <svg class = "brd" width ="250" height ="250" viewBox = "0 0 100 100">
+      <circle cx="50" cy="50" r="20" style ="fill:green;" />
+    </svg>
+    <svg class = "brd" width ="250" height ="250" viewBox = "0 0 50 50">
+      <circle cx="50" cy="50" r="20" style ="fill:green;" />
+    </svg>
+  </div>
+  <div class="row">
+    <svg class = "brd" width ="250" height ="250" viewBox = "30 30 40 40">
+      <circle cx="50" cy="50" r="20" style ="fill:green;" />
+    </svg>
+    <svg class = "brd" width ="250" height ="250" viewBox = "50 50 20 20">
+      <circle cx="50" cy="50" r="20" style ="fill:green;" />
+    </svg>
+  </div>
 
 
 </body>

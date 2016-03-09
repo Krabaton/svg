@@ -7,21 +7,25 @@
   <link rel="stylesheet" href="bower/normalize-css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <style>
-  body{
-    text-align: center;
-  }
-    .brd {
-      border: 1px solid #000;
-    }
-   .rect {
-      fill: #ff0;
-      stroke: red;
-      stroke-width: 2;
-    }
-   .fill-white {
-      fill: #fff;
+    body {
+      text-align: center;
     }
 
+   .base {
+      fill: #FFC107;
+      stroke: #E65100;
+      stroke-width: 2;
+    }
+
+   .star {
+      fill: #FFC107;
+      stroke: #E65100;
+    }
+
+    .text {
+      fill: #FF6F00;
+      font: 45px Verdana;
+    }
   </style>
 </head>
 <body>
@@ -35,34 +39,34 @@
     </linearGradient>
   </defs>
 
-  <rect rx = "20" ry = "20" x="50" y = "50" width = "200" height ="100" style = "fill: white; stroke: red; stroke-width:2"/>
+  <rect rx = "20" ry = "20" x="50" y = "50" width = "200" height ="100" style="fill: #FFC107; stroke: #E65100; stroke-width: 2;" />
 
-  <rect x="300" y = "50" width = "200" height ="100" class = "rect" />
+  <rect x="300" y = "50" width = "200" height ="100" class = "base" />
 
-  <circle class = "rect" cx = "600" cy ="100" r = "50"/>
+  <circle cx = "600" cy ="100" r = "50" class = "base" />
 
-  <ellipse class = "rect" cx = "800" cy ="100" rx = "100" ry = "50"/>
+  <ellipse cx = "800" cy ="100" rx = "100" ry = "50" class = "base" />
 
-  <line x1="50" y1="200" x2="250" y2="300" style = "stroke: red; stroke-width:2" />
+  <line x1="50" y1="200" x2="250" y2="300" class = "base" />
 
-  <polyline points = "300,200 400,300 500,200" style = "fill: #ccc; stroke: green; stroke-width:2" />
+  <polyline points = "300,200 400,300 500,200" class = "base" />
 
-  <polygon points = "620,220 630,300 700,200" style = "fill: green; stroke: red; stroke-width:2" />
+  <polygon points = "620,220 630,300 700,200" class = "base" />
 
 
-  <polygon points = "100,310 40,498 190,378 10,378 160,498" style = "fill: green; stroke: red; stroke-width:2; fill-rule:nonzero" />
-  <polygon points = "300,310 240,498 390,378 210,378 360,498" style = "fill: green; stroke: red; stroke-width:2; fill-rule:evenodd" />
+  <polygon points = "100,310 40,498 190,378 10,378 160,498" style = "fill: #FFC107; stroke: #E65100; stroke-width:2; fill-rule:nonzero" />
+  <polygon points = "300,310 240,498 390,378 210,378 360,498" style = "fill: #FFC107; stroke: #E65100; stroke-width:2; fill-rule:evenodd" />
  
-  <text x= "520" y ="420" fill = "red" font-size="45" font-family ="Arial">Loftschool</text>
+  <text x= "520" y ="420" class="text">Loftschool</text>
 
   <defs>
     <polygon id = "elem" points="25,0 30,20 50,20 35,30 40,50 25,35 10,50 15,30 0,20 20,20" style="stroke:black; stroke-width:2" transform="scale(0.5)"/>
   </defs>
-      <use x="10" y="550" class ="fill-white" xlink:href="#elem"/>
-      <use x="40" y="550" class ="fill-white" xlink:href="#elem"/>
-      <use x="70" y="550" class ="fill-white" xlink:href="#elem"/>
-      <use x="100" y="550" class ="fill-white" xlink:href="#elem"/>
-      <use x="130" y="550" class ="fill-white" xlink:href="#elem"/>
+      <use x="10" y="550" class ="star" xlink:href="#elem"/>
+      <use x="40" y="550" class ="star" xlink:href="#elem"/>
+      <use x="70" y="550" class ="star" xlink:href="#elem"/>
+      <use x="100" y="550" class ="star" xlink:href="#elem"/>
+      <use x="130" y="550" class ="star" xlink:href="#elem"/>
   </svg>
 
 
