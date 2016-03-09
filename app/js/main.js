@@ -12,9 +12,11 @@
 
   stringDate = stringDate.split('.').reverse().join('');
 
-  var apiUrls = ['http://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=GBP&date=' + stringDate,
-                 'http://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=EUR&date=' + stringDate,
-                 'http://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=USD&date=' + stringDate];
+  var apiUrls = [
+    'http://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=GBP&date=' + stringDate,
+    'http://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=EUR&date=' + stringDate,
+    'http://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=USD&date=' + stringDate
+  ];
 
   function httpGet(apiUrl) {
     return new Promise(function(resolve, reject) {
@@ -23,7 +25,7 @@
         type: 'GET',
         success: function(response) {
           var headline = $(response.responseText).find('cc').text(),
-              rate = $(response.responseText).find('rate').text();
+            rate = $(response.responseText).find('rate').text();
 
           valcode.push(headline);
           exchange[headline] = rate;
@@ -52,14 +54,18 @@
         }
       },
       plotOptions: {
-          column: {
-              pointWidth: 100,
-          }
+        column: {
+          pointWidth: 100
+        }
       },
       series: [{
         showInLegend: false,
         name: 'текущий курс',
-        data: [+exchange['EUR'], +exchange['USD'], +exchange['GBP']]
+        data: [
+          +exchange['EUR'],
+          +exchange['USD'],
+          +exchange['GBP']
+        ]
       }]
     });
   }

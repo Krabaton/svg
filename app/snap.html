@@ -10,9 +10,9 @@
 </head>
 <body>
   <svg id ="mk" width = "700" height ="500">
-    <rect id = "base" x="50" y="450" width="250" height="25" class="svg-rect" />
+    <rect id = "base" x="50" y="450" width="250" height="25" />
     <polygon id = "pole" points="100,450 250,450 200,200 150,200" />
-    <rect id = "lamp" x="125" y="100" width="100" height="100" class="svg-rect" />
+    <rect id = "lamp" x="125" y="100" width="100" height="100" />
     <polygon id = "roof" points="100,100 250,100 175,50" />
   </svg>
   <script>
@@ -22,22 +22,22 @@
           pole = s.select("#pole"),
           lamp = s.select("#lamp"),
           roof = s.select("#roof"),
-          mk = s.g(base, pole, lamp, roof);
-          mk.attr({fill: color});
+          lighthouse = s.g(base, pole, lamp, roof);
+          lighthouse.attr({fill: color});
           
 
           var f = s.filter(Snap.filter.blur(10, 20)),
-          c = s.line(225, 150, 225, 150).attr({
-            stroke:"#E5F250",
+          light = s.line(225, 150, 225, 150).attr({
+            stroke:"#E50050",
             strokeWidth:15,
             filter: f
           });
-          c.transform("r25,225,150");
+          light.transform("r25,225,150");
 
-          mk.animate({transform: "t-300,0"}, 0, mina.easeinout, function () {
-            mk.animate({transform: "t0,0"}, 1000, mina.elastic, function () {
-              lamp.animate({fill: "#E5F250"}, 500, mina.easeinout);
-              c.animate({x2: "800"}, 700, mina.backout)
+          lighthouse.animate({transform: "t-300,0"}, 0, mina.easeinout, function () {
+            lighthouse.animate({transform: "t0,0"}, 1000, mina.elastic, function () {
+              lamp.animate({fill: "#E50050"}, 500, mina.easeinout);
+              light.animate({x2: "800"}, 100, mina.backout)
             })
           });
   </script>
