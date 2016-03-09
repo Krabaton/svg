@@ -1,0 +1,39 @@
+.icon {
+    background-repeat: no-repeat;
+    width: px;
+    height: px;
+    &.icon-fb {
+        background-image: url('..\img\icons\png\fb.png');
+    }
+
+    width: px;
+    height: px;
+    &.icon-fbh {
+        background-image: url('..\img\icons\png\fbh.png');
+    }
+
+    width: px;
+    height: px;
+    &.icon-g {
+        background-image: url('..\img\icons\png\g.png');
+    }
+
+    width: px;
+    height: px;
+    &.icon-gh {
+        background-image: url('..\img\icons\png\gh.png');
+    }
+
+    width: px;
+    height: px;
+    &.icon-tw {
+        background-image: url('..\img\icons\png\tw.png');
+    }
+
+    width: px;
+    height: px;
+    &.icon-twh {
+        background-image: url('..\img\icons\png\twh.png');
+    }
+
+}

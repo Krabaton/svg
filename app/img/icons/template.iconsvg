@@ -1,0 +1,11 @@
+.icon {
+    background-repeat: no-repeat;
+    {{#items}}
+    width: {{width}}px;
+    height: {{height}}px;
+    &.icon-{{slug}} {
+        background-image: url('{{{datauri}}}');
+    }
+
+    {{/items}}
+}

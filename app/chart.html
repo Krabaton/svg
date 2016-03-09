@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <!-- css -->
+  <link rel="stylesheet" href="bower/normalize-css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+<button id="doIt"> Build </button>
+<div id="result"></div>
+<script src='js/PieChart.js'></script>
+<script>
+  doIt.addEventListener('click', function() {
+    result.appendChild(
+      pieChart([12, 23, 34, 45], 640, 400, 200, 200, 150,
+               ['red', 'blue', 'yellow', 'green'],
+               ['Part1', 'Part2', 'Part3', 'Part4'], 400, 100));
+  });
+</script>
+</body>
+</html>
