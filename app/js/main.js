@@ -1,14 +1,14 @@
-(function() {
+(function () {
   'use strict';
 
   var date = new Date(),
-      valcode = [],
-      exchange = [],
-      stringDate = date.toLocaleDateString('ru', {
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit'
-      });
+    valcode = [],
+    exchange = [],
+    stringDate = date.toLocaleDateString('ru', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit'
+    });
 
   stringDate = stringDate.split('.').reverse().join('');
 
@@ -19,11 +19,11 @@
   ];
 
   function httpGet(apiUrl) {
-    return new Promise(function(resolve, reject) {
+    return new Promise(function (resolve, reject) {
       $.ajax({
         url: apiUrl,
         type: 'GET',
-        success: function(response) {
+        success: function (response) {
           var headline = $(response.responseText).find('cc').text(),
             rate = $(response.responseText).find('rate').text();
 
@@ -74,3 +74,20 @@
     .all(apiUrls.map(httpGet))
     .then(createHighcharts);
 })();
+
+$('#container').highcharts({
+  chart: {
+    renderTo: 'charts', defaultSeriesType: 'bar'
+  },
+  title: {
+    text: 'Сравнение'
+  },
+  xAxis: {
+    categories: ['Ром', 'Коньяк', 'Виски']
+  },
+  yAxis: {
+    title: { text: 'Стопок выпито за вечер' }
+  },
+  series: [{ name: 'Женя', data: [1, 0, 4] },
+    { name: 'Саша', data: [5, 7, 3] }]
+});

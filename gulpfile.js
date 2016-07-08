@@ -1,5 +1,4 @@
 var gulp = require("gulp"),
-    iconify = require("gulp-iconify"),
     browserSync = require('browser-sync').create();
 
 // Сервер
@@ -21,25 +20,6 @@ gulp.task('watch', function () {
   ]).on('change', browserSync.reload);
 });
 
-gulp.task('iconify', function() {
-    iconify({
-        src: 'app/img/icons/*.svg',
-        styleTemplate: 'app/img/icons/template.iconsvg',
-        cssOutput:  'app/css',
-        scssOutput: 'app/scss',
-        defaultWidth: '100px',
-        defaultHeight: '100px',
-        svgoOptions: {
-            enabled: true,
-            options: {
-                plugins: [
-                    { removeUnknownsAndDefaults: false },
-                    { mergePaths: false }
-                ]
-            }
-        }
-    });
-});
 
 // Задача по-умолчанию
 gulp.task('default', ['server', 'watch']);

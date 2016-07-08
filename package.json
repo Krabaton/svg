@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "devDependencies": {
     "browser-sync": "^2.9.4",
-    "gulp": "^3.9.0",
-    "gulp-iconify": "^0.5.0"
+    "gulp": "^3.9.0"
   }
 }
