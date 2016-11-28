@@ -137,3 +137,8 @@ h2 {
   width: 32px;
   height: 32px
 }
+
+.no-color {
+  background-image: none;
+  background-color: #fff;
+}
