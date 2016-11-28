@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
@@ -7,31 +8,74 @@
   <link rel="stylesheet" href="bower/normalize-css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <style>
-    .container {
-      display: inline-block;
-      margin: 5px;
-      text-align: center;
-    }
-    svg, rect {
-      transition: 1s all;
-    }
-
-    svg rect {
-      fill: blue;
-      transform-origin: center;
-    }
-
-    svg:hover rect {
-      fill: red;
-      transform: scale(1.2) rotate(45deg);
-    }
+  .container {
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+    border: 3px solid #ccc;
+  }
+  
+  svg,
+  rect {
+    transition: 1s all;
+  }
+  
+  svg rect {
+    fill: blue;
+    transform-origin: center;
+  }
+  
+  .hover:hover rect {
+    fill: red;
+  }
+  
+  .rotate:hover rect {
+    transform: rotate(45deg);
+  }
+  
+  .scale:hover rect {
+    transform: scale(1.5);
+  }
+  
+  .all:hover rect {
+    fill: red;
+    transform: scale(1.2) rotate(45deg);
+  }
   </style>
 </head>
+
 <body>
   <div class="container">
-    <svg width = "100" height = "100" viewBox = "0 0 100 100">
-      <rect x = "25" y = "25" width = "50" height = "50" />
+    <svg class='hover' width="100" height="100" viewBox="0 0 100 100">
+      <rect x="25" y="25" width="50" height="50" />
+    </svg>
+    <svg class='rotate' width="100" height="100" viewBox="0 0 100 100">
+      <rect x="25" y="25" width="50" height="50" />
+    </svg>
+    <svg class='scale' width="100" height="100" viewBox="0 0 100 100">
+      <rect x="25" y="25" width="50" height="50" />
+    </svg>
+    <svg class='all' width="100" height="100" viewBox="0 0 100 100">
+      <rect x="25" y="25" width="50" height="50" />
+    </svg>
+  </div>
+  <div class="container">
+    <svg class='hover' width="100" height="100" viewBox="0 0 100 100">
+      <rect x="25" y="25" width="50" height="50" />
+    </svg>
+    <svg width="100" height="100" viewBox="0 0 100 100">
+      <rect x="25" y="25" width="50" height="50" transform='rotate(45,50,50)' />
+    </svg>
+    <svg width="100" height="100" viewBox="0 0 100 100">
+      <rect x="25" y="25" width="50" height="50" transform='scale(1.5) translate(-15, -15)' />
+    </svg>
+    <svg width="100" height="100" viewBox="0 0 100 100">
+      <rect x="25" y="25" width="50" height="50" transform='translate(15, 15)' />
+    </svg>
+    <svg width="100" height="100" viewBox="0 0 100 100">
+      <rect x="25" y="25" width="50" height="50" transform='skewX(15)' />
     </svg>
   </div>
 </body>
+
 </html>
