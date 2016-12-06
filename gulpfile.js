@@ -1,8 +1,8 @@
 var gulp = require("gulp"),
-    browserSync = require('browser-sync').create();
+  browserSync = require('browser-sync').create();
 
 // Сервер
-gulp.task('server', function () {
+gulp.task('server', function() {
   browserSync.init({
     port: 9000,
     server: {
@@ -12,7 +12,7 @@ gulp.task('server', function () {
 });
 
 // Слежка
-gulp.task('watch', function () {
+gulp.task('watch', function() {
   gulp.watch([
     'app/*.html',
     'app/js/**/*.js',

@@ -1,0 +1,57 @@
+.social {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+
+[class^="icon-"] {
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.icon-dims {
+  width: 32px;
+  height: 32px;
+  background-image: url('../img/icons.svg');
+  background-repeat: no-repeat;
+}
+
+.icon-fb {
+  background-position: 0 0;
+}
+
+.icon-g {
+  background-position: 0 -32px;
+}
+
+.icon-tw {
+  background-position: 0 -64px;
+}
+
+
+.icon {
+  line-height: 2rem;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 10px;
+  vertical-align: middle;
+  fill: #2874A6;
+  fill-opacity: .75;
+}
+
+.icon:hover {
+  fill-opacity: 1;
+}
+
+.modify:hover {
+  fill: #BA4A00;
+}

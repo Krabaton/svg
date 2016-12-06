@@ -15,12 +15,6 @@ body {
   display: inline-block;
 }
 
-.icon {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-}
-
 .main-list {
   margin: 0;
   padding: 0;
@@ -56,21 +50,6 @@ body {
   vertical-align: middle;
 }
 
-.icon {
-  line-height: 2rem;
-  display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  margin-left: 10px;
-  vertical-align: middle;
-  fill: currentColor;
-  fill: #2874A6;
-  fill-opacity: .75;
-}
-
-.icon:hover {
-  fill-opacity: 1;
-}
 
 .hide {
   display: none;
@@ -78,64 +57,6 @@ body {
 
 h2 {
   color: #BA4A00;
-}
-
-.modify:hover {
-  fill: #BA4A00;
-}
-
-.social {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.social li {
-  display: inline-block;
-  margin: 0 5px;
-}
-
-[class^="icon-"] {
-  display: block;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.icon-fb,
-.icon-fb\:regular {
-  background-image: url('../img/icons.svg');
-  background-position: 0 0;
-  background-repeat: no-repeat
-}
-
-.icon-fb-dims {
-  width: 32px;
-  height: 32px
-}
-
-.icon-g,
-.icon-g\:regular {
-  background-image: url('../img/icons.svg');
-  background-position: 0 -32px;
-  background-repeat: no-repeat
-}
-
-.icon-g-dims {
-  width: 32px;
-  height: 32px
-}
-
-.icon-tw,
-.icon-tw\:regular {
-  background-image: url('../img/icons.svg');
-  background-position: 0 -64px;
-  background-repeat: no-repeat
-}
-
-.icon-tw-dims {
-  width: 32px;
-  height: 32px
 }
 
 .no-color {
